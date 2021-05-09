@@ -10,6 +10,12 @@
 							<input type="text" name="name" placeholder="Tên bài viết" class="form-control" required>
 						</td>
 					</tr>
+					<tr>
+						<td width="10%">Hashtag</td>
+						<td width="90%" id="hashtag">
+							<button type="button"  onclick="addHashtag()">Thêm hashtag</button>
+						</td>
+					</tr>
 					<!-- upload image -->
 					<tr>
 						<td>Ảnh</td>
@@ -39,6 +45,7 @@
 							<textarea name="description" style="min-width: 100%; width: 100%; height: 100px; margin: 10px 0;" class="form-control" placeholder="Mô tả bài viết"></textarea>
 						</td>
 					</tr>
+					
 				</table>
 				<div>
 					<span>Nội dung bài viết</span> <br>
@@ -51,5 +58,24 @@
 				<a href="index.php?controller=blog/list" class="btn btn-success" style="margin-top: 10px;">Quay lại</a>
 			</form>
 		</div>
+		<script>
+			function addHashtag(){
+				var a=document.getElementById("hashtag");
+				var input = document.createElement("input");
+				input.setAttribute("type","text");
+				input.setAttribute("name","hashtag[]");
+				input.setAttribute("class","hashtag");
+				input.setAttribute("autofocus","");
+				document.getElementById("hashtag").appendChild(input);
+			}
+			function forcusOut(a){
+				a.setAttribute("disabled","disable");
+				a.setAttribute("onclick","editHashtag(this)");
+			}
+			function editHashtag(a){
+				a.removeAttribute("disabled");
+				a.removeAttribute("onclick");
+			}
+		</script>
 	</div>
 </div>

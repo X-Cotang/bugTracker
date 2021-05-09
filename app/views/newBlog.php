@@ -11,7 +11,7 @@
                     <div class="entry-meta">
                         <a href="#" rel="category tag">
                             <?php
-                                $key = $this->Model->fetchOne("select * from menu_catalog where id=".$value["catalog"]);
+                                $key = $this->Model->fetchOne("select * from menu_catalog where id=?",[$value["catalog"]]);
                                 if(isset($key["name"]))
                                     echo $key["name"];
                             ?>

@@ -1,120 +1,116 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Rubel Miah">
-	
-	<!-- favicon icon -->
-	<link rel="shortcut icon" href="public/client/images/icon/favicon.png">
+  <meta charset="UTF-8">
+  <title>Heroku app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Signika:400,600'>
+  <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"-->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/home.css">
 
-	<title>Rosy - Beautiful HTML5 Blog Template</title>
-
-	<!-- common css -->
-	<link rel="stylesheet" href="public/client/css/bootstrap.min.css">
-	<link rel="stylesheet" href="public/client/css/font-awesome.min.css">
-	<link rel="stylesheet" href="public/client/css/magnific-popup.css">
-	<link rel="stylesheet" href="public/client/css/owl.carousel.css">
-	<link rel="stylesheet" href="public/client/css/owl.theme.css">
-	<link rel="stylesheet" href="public/client/css/slicknav.css">
-	<link rel="stylesheet" href="public/client/css/style.css">
-	<link rel="stylesheet" href="public/client/css/responsive.css">
-
-	<!-- HTML5 shim and Respond.js IE9 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="public/client/js/html5shiv.js"></script>
-    <script src="public/client/js/respond.js"></script>
-    <![endif]-->
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script  src="public/js/main.js"></script>
+  
+  <!--script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
+<!--script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4643531401452174",
+    enable_page_level_ads: true
+  });
+</script-->
+  
 </head>
+<body>
+<header style="height: 30px;">
+  <span class="menu"><i class="material-icons">menu</i></span>
+  <span style="font-style: italic;font-family: cursive;font-size: 20px;"><a href="index.php" style="color: black;text-decoration: unset;">Xcotang</a></span>
+  <section class="main" style="padding-top: 0px;">
+  <aside class="keep">
+    <ul>
+      <li>
+        <a href="admin">
+          <span><i class="fas fa-file-signature"></i></span>
+           Viết Bài
+          <span class="notif red">1</span>
+        </a>
+      </li>      
+      <li>
+        <a id="Web" href="index.php?controller=search" onclick="">
+          <span ><i class="fas fa-globe-americas fa-spin"></i></span>
+           Search
+          <span class="notif yellow">2</span>
+        </a>
+      </li>
+      <li>
+        <a id="Asm" href="#" onclick="">
+          <span ><i class="fas fa-code fa-spin"></i></span>
+           asm
+          <span class="notif green">6</span>
+        </a>
+      </li>      
+      <li>
+        <a href="#" onclick="">
+          <span><i class="fab fa-ubuntu fa-spin"></i></span>
+           linux
+        </a>
+      </li>     
+      <li>
+        <a href="#" onclick="">
+          <span><i class="material-icons">import_contacts</i></span>
+           forensic
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="">
+          <span><i class="material-icons">photo</i></span>
+           photo
+        </a>
+      </li> 
+      <li>
+        <a href="#" onclick="">
+          <span><i class="material-icons">event</i></span>
+           event
+        </a>
+      </li>      
+      <li>
+        <a href="" onclick="">
+          <span><i class="fas fa-tools fa-spin"></i></span>
+           tool
+        </a>
+      </li>      
+      <li>
+        <a href="#" onclick="">
+          <span><i class="material-icons">textsms</i></span>
+           textsms
+        </a>
+      </li>      
+      <li>
+        <a href="#" onclick="">
+          <span><i class="material-icons">receipt</i></span>
+           Receipt
+        </a>
+      </li>
+    </ul>
+  </aside>
+</section>
 
-<body class="home blog">
+</header>
+<div id="main" style="margin: 50px 75px;padding-top: 45px;padding-left: 50px;padding-right: 50px;">
 
-	<!--preloader start-->
-    <div id="st-preloader">
-        <div id="pre-status">
-            <div class="preload-placeholder"></div>
-        </div>
-    </div>
-	<!--/preloader end-->
-
-    <!--header start-->
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="top-menu-are">
-                        <div id="navigation-wrapper">
-                            <ul class="top-menu text-center">
-                                <li><a href="index.html">Trang chủ</a></li>
-                                <li><a href="contact.html">Bài viết</a></li>
-                            </ul>                   
-                        </div>
-                    </div>
-                    <div class="menu-mobile"></div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--/header end-->
-	
-	<div class="main-logo text-center">
-		<a href="index.php"><img src="public/client/images/logo.png" alt="Rosy"></a>
-	</div>
-
-	<!--blog start-->
-	<div class="container">			
+	<div class="">			
         <?php
             if(file_exists($controller))
                 include $controller;
         ?>            
 	</div>
-	<!--/blog end-->
-
-
-	<!--footer start-->
-	<footer id="footer">
-		<div class="footer-social text-center">
-			<a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i> <span class="hidden-sm hidden-xs">Facebook</span></a>
-			<a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i> <span class="hidden-sm hidden-xs">Twitter</span></a>
-			<a class="google-plus" href="#" target="_blank"><i class="fa fa-google-plus"></i> <span class="hidden-sm hidden-xs">Google+</span></a>
-			<a class="pinterest" href="#" target="_blank"><i class="fa fa-pinterest-p"></i> <span class="hidden-sm hidden-xs">Pinterest</span></a>
-			<a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i> <span class="hidden-sm hidden-xs">Instagram</span></a>
-			<a class="bloglovin" href="#" target="_blank"><i class="fa fa-heart"></i> <span class="hidden-sm hidden-xs">Bloglovin</span></a>
-		</div><!-- /Footer Social -->
-		
-		<div class="footer-copy-right">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="copy-right-text pull-left">
-							<p>Copyright 2015 - Desinged by <a href="">ShapedTheme</a> in Dhaka, Bangladesh</p>
-						</div><!-- /Copyright Text -->
-						
-						<div class="scroll-up pull-right">
-					        <a href="#">Back to top</a>
-					    </div>
-						<!-- Scroll Up -->
-					</div>
-				</div>
-			</div>
-		</div><!-- Footer Copy Right -->
-	</footer>
-	<!--/footer end-->
-
-
-	<!-- js files -->
-	<script type="text/javascript" src="public/client/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="public/client/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="public/client/js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="public/client/js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="public/client/js/masonry.min.js"></script>
-	<script type="text/javascript" src="public/client/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="public/client/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="public/client/js/jquery.slicknav.js"></script>
-	<script type="text/javascript" src="public/client/js/scripts.js"></script>
+</div>
 </body>
+
 </html>
+
+
+

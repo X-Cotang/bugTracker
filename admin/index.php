@@ -6,7 +6,7 @@
 	include "../config/Controller.php";
 	include "../config/RemoveUnicode.php";
 	include "../config/Token.php";
-
+	$session=true;
 	if(isset($_GET["act"]) && $_GET["act"]=="logout")
 		unset($_SESSION["account"]);
 

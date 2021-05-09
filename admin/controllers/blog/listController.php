@@ -1,14 +1,15 @@
 <?php
 	
 	class ListBlog extends Controller{
-		public function __construct(){
-			parent::__construct();
+		public function __construct($session){
+			parent::__construct($session);
 
 			$act = isset($_GET["act"])?$_GET["act"]:"";
 			switch ($act) {
 				case 'delete':
 					$id = isset($_GET["id"])?$_GET["id"]:0;
 					$this->Model->execute("delete from menu_list_blog where token='$id'");
+					$this->Model->execute("delete from blog_hashtag where token='$id'");
 					echo "<meta http-equiv='refresh' content='0; URL=index.php?controller=blog/list'>";
 					break;
 			}
@@ -29,6 +30,6 @@
 			include "views/blog/listView.php";
 		}
 	}
-	new ListBlog();
+	new ListBlog($session);
 
 ?>

@@ -41,12 +41,26 @@
 	<div class="col-md-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Thêm chủ đề</div>
-			<div class="panel-body">
-				<form action="index.php?controller=catalog_blog/list&act=add" method="post">
+			<form action="index.php?controller=catalog_blog/list&act=add" method="post">
+			<div class="panel-body" id="catalog">
+				
 					<input type="text" name="topic" class="form-control" placeholder="Tên chủ đề" />
+					<button type="button" class="btn btn-primary"  onclick="addSubdomain()">Thêm subdomain</button>
 					<input type="submit" value="Thêm" class="btn btn-primary" style="margin-top: 5px;">
-				</form>
+				
 			</div>
+			</form>
 		</div>
 	</div>
 </div>
+<script>
+			function addSubdomain(){
+				var a=document.getElementById("catalog");
+				var input = document.createElement("input");
+				input.setAttribute("type","text");
+				input.setAttribute("name","domains[]");
+				//input.setAttribute("class","hashtag");
+				//input.setAttribute("autofocus","");
+				a.appendChild(input);
+			}
+</script>

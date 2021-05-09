@@ -82,6 +82,9 @@
                             <li>
                                 <a href="index.php?controller=catalog_blog/list">Chủ đề bài viết</a>
                             </li>
+                            <li>
+                                <a href="index.php?controller=hashtag/list">Hashtag</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

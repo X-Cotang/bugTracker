@@ -1,8 +1,8 @@
 <?php
 
 	class EditCatalogBlog extends Controller{
-		public function __construct(){
-			parent::__construct();
+		public function __construct($session){
+			parent::__construct($session);
 
 			$act = isset($_GET["act"])?$_GET["act"]:"";
 			$id = isset($_GET["id"])?$_GET["id"]:"";
@@ -23,6 +23,6 @@
 			include "views/catalog_blog/editView.php";
 		}
 	}
-	new EditCatalogBlog();
+	new EditCatalogBlog($session);
 	
 ?>

@@ -2,9 +2,9 @@
 
 	class login extends Controller{
 
-		public function __construct(){
+		public function __construct($session){
 
-			parent::__construct();
+			parent::__construct($session);
 
 			if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -27,6 +27,6 @@
 		}
 
 	}
-	new login();
+	new login($session);
 
 ?>

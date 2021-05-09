@@ -1,8 +1,8 @@
 <?php 
 
 	class addUsers extends Controller{
-		public function __construct(){
-			parent::__construct();
+		public function __construct($session){
+			parent::__construct($session);
 
 			$act = isset($_GET["act"])?$_GET["act"]:"";
 			switch ($act) {
@@ -31,6 +31,6 @@
 			include "views/users/addView.php";
 		}
 	}
-	new addUsers();
+	new addUsers($session);
 
  ?>
