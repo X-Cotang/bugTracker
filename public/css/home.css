@@ -1,0 +1,107 @@
+.listHashtag{
+    display: flex;
+    flex-flow: wrap;
+    margin: 1em;
+    overflow: auto;
+    max-height: 10em;
+}
+
+
+.listHashtag::-webkit-scrollbar
+{
+	width: 2px;
+}
+
+.listHashtag::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73 125 189)), color-stop(0.86, rgb(1 63 250 / 52%)));
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #6c757d;
+    background-color: transparent;
+    background-image: none;
+    border-color: #6c757d;
+    position: relative;
+    z-index: 2;
+
+}
+
+.search {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #ffffff59;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    flex: 1 1 auto;
+    width: 1%;
+    font-family: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+
+
+}
+.search-form{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.collapsible{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #727272b0;
+}
+
+.collapsible-child {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+  }
+  
+.active-collapsible, .collapsible:hover {
+    background-color: #555;
+}
+
+.content-collapsible {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+tr.checklist:hover{
+      background-color: ivory;
+}
+
+.scanner-status{
+    float: right;
+    margin: 0 1em;
+}
