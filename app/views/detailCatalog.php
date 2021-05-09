@@ -64,7 +64,9 @@
                                 } 
                             ?-->
                             <?php
-                                echo "<pre style='padding: 1em 0;'>".$dm["subdomain"]."</pre>";
+                                echo "<pre style='padding: 1em 0;'>".$dm["subdomain"];
+                                if($dm["subdomain"]=="pending"){echo '<i class="fas fa-sync-alt fa-spin"></i>';}
+                                echo "</pre>";
                             ?>
                         </div>
                         <?php }?>

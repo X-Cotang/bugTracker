@@ -8,7 +8,7 @@
 			$value = $this->Model->fetchOne("select * from menu_catalog where id=?",[$id]);
 			$domains_test=$this->Model->fetch("select * from domains where catalog_id=?",[$id]);
 			//exit("test");
-			include "app/views/detailCatalog-test.php";
+			include "app/views/detailCatalog.php";
 		}
 	}
 	new detailCatalog($session);

@@ -44,8 +44,8 @@
             $domain=$this->Model->fetchOne("select * from domains where domain=?",[$d]);
             //print_r($domain);
             if($domain["pid"]==0||$domain["pid"]==1){
-                $this->pid = shell_exec("python3 ../Sublist3r/sublist3r.py -b -d ".$d."> /tmp/".$token.".txt 2>&1 & echo $!");
-                $this->Model->execute("UPDATE domains SET pid = ?, domain_token = ? WHERE domain = ?",[$this->pid,$token,$d]);
+                $this->pid = shell_exec("python3 ../Sublist3r/sublist3r.py -d ".$d."> /tmp/".$token.".txt 2>&1 & echo $!");
+                $this->Model->execute("UPDATE domains SET pid=?, domain_token=?, subdomain=?  WHERE domain = ?",[$this->pid,$token,"pending",$d]);
                 exit('{"success": 1}');
             }else{
                 exit('{"success": 0}');
@@ -57,7 +57,7 @@
         private function isRunning($pid)
         {
             try {
-                print_r($pid);
+                //print_r($pid);
                 $result = shell_exec(sprintf('ps %d', $pid));
                 if(count(preg_split("/\n/", $result)) > 2) {
                     return true;
@@ -76,7 +76,7 @@
                     //print_r($dt["pid"]);
                     if(!$this->isRunning($dt["pid"])){
                         $filename = "/tmp/".$dt["domain_token"].".txt";
-                        print_r($filename);
+                        //print_r($filename);
                         $fp = fopen($filename, "r");
                         $contents = fread($fp, filesize($filename));//đọc file
                         $this->Model->execute("UPDATE domains SET subdomain=?,pid=? WHERE domain = ?",[$contents,1,$dt["domain"]]);
@@ -89,7 +89,7 @@
                     }
                 }
             }
-            exit('{"success": 0}');
+            exit('{"success": 1}');
         }
     }
 	new subDomain();
